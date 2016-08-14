@@ -25,7 +25,6 @@
       }
     } else {
       if (selector instanceof HTMLElement) {
-        console.log('algo');
         callback(selector, self.myIndex, "one")
       } else if (typeof selector.length == 'number' && typeof selector.item == 'function') {
         if (self.myIndex == undefined) {
@@ -234,6 +233,6 @@
     	return length;
     }
   }
-  
+
   window.M = M, window.$$ = M;
 })();
