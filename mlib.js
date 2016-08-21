@@ -187,6 +187,7 @@ function loadMLiB() {
 			})
 			return M(nthChild);
 		}
+		
 		_self.last = function() {
 			var lastChild;
 			lastChild = document.querySelectorAll(_arg)[document.querySelectorAll(_arg).length - 1];
