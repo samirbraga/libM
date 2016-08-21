@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 Mlib - powered by Mathers.com.br
 All rights reserveds - Copyright
@@ -1109,4 +1108,3 @@ window.onload = function(){
 
   window.M = M, window.$$ = M;
 })();
->>>>>>> e222d45319cbd7759c592caa989e31537017a59e
