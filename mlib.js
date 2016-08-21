@@ -2,7 +2,6 @@
 Mlib - powered by Mathers.com.br
 All rights reserveds - Copyright
 */
-
 function loadMLiB() {
 	var M = function() {
 		var _arg = arguments[0];
