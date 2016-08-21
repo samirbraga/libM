@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="mlib.js"></script>
+	<style>
+
+		*{
+			font-family: sans-serif;
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			box-sizing: border-box;
+		}
+		.m-progressbar{
+			width: 400px;
+			height: 40px;
+			background: #f1f2f3;
+			position: relative;
+			border: 1px solid #3c938b;
+			box-shadow: 0 0 3px 0px rgba(0,0,0,0.2)
+		}
+		.m-progressbar .m-progressbar-value{
+			height: 40px;
+			background: #3c938b;  
+		}
+		.m-progressbar .m-progressbar-info{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;  
+			align-items: center;  
+			color: #a4dad5;
+		}
+
+		.m-input-number-container{
+			width: auto;
+		}
+		.m-input-number-container div:nth-child(1){
+			display: inline-block;
+			background: #3c948b;
+		}
+		.m-input-number-container div div:nth-child(1){
+			display: flex;
+			align-items: center;
+			border: solid 1px #3c948b;
+		}
+		.m-input-number{
+			height: 30px;
+		}
+		.m-input-number-buttons, .m-input-number{
+			display: inline-block;
+		}
+		.m-input-number-buttons{
+			font-size: 0;
+		}
+		.m-input-number-buttons button{
+			text-align: center;
+			background: #3c948b;
+			color: #fff;
+			cursor: pointer;
+		}
+		.m-input-number-buttons button:hover{
+			background: #4ab5aa;
+		}
+		.m-polygon-hover{
+			background: #3c948b;
+		}
+	</style>
+</head>
+<body>
+	<m-progressbar value="88" max="100" show-text="percent">M{value} / M{max}</m-progressbar>
+
+	<br>
+		<m-progressbar value="2" max="10" show-text="value">M{value} / M{max}</m-progressbar>
+		<br>
+		<m-input type="number" step="256" onlynumbers="true" value="2" keydown='true'></m-input>
+		<br>
+		<m-polygon  size="50" background='#3c948b' hover="m-polygon-hover" type="octagon">Oi</m-polygon>
+		<br>
+		<m-input type="number" step="256" onlynumbers="true" value="2" keydown='true'></m-input>
+		<br>
+		<m-polygon  size="50" background='#3c948b' hover="m-polygon-hover" type="hexagon">Iai</m-polygon>
+		<hr style="height: 3px; background: black; width: 100%; ">
+
+</body>
+</html>

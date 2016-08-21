@@ -1,0 +1,40 @@
+<html>
+<head>
+
+	<script src="mlib.js"></script>
+	<link rel="stylesheet" href="mlibstyle.css">
+	<script type="text/javascript" defer>
+
+	</script>
+</head>
+<body>
+<h1></h1>
+<br>
+M{idade}
+
+<br>
+
+<m-polygon size='50' type="octagon" background="#3c948b">Oi</m-polygon>
+
+<br>
+<div id="scope">
+	<input type="text" m-listen="nome"> 
+	M{nome}
+	<input type="text" m-listen="nome">
+	<m-input style="background: M{color}" type="number" m-listen="nome"></m-input>
+	<m-input style="background: M{color}" type="number" value="M{idade}"></m-input>
+	<input type="text" m-listen="idade">
+
+</div>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+		console.log(M('input').by.attr('type', 'text').attrList())
+		M('#scope').scope(function(scope){
+			scope.nome = "Samir";
+			scope.idade = 44444;
+		});
+	})
+</script>
+</body>
+</html>
