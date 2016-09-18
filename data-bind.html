@@ -1,40 +1,117 @@
 <html>
-<head>
+	<head>
+		<meta charset="utf-8" >
+		<script src="mlib.js"></script>
+		<link rel="stylesheet" href="mlibstyle.css">
+		<style>
+		body{
+			background: #f1f2f3
+		}
+		.scope{
+			margin: 30px;
+		}
+		.topBar {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border-bottom: 2px solid #3c948b;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+  padding: 0 30px;
+}
+hr{
+  height: 1px;
+  background: #999999;
+  margin: 30px 0;
+}
+.topBar h1{
+  display: block;
+  height: 80px;
+  font-size: 26pt;
+  font-family: sans-serif;
+  line-height: 80px;
+}
+.topBar h1 span{
+  font-size: 16pt;
+  line-height: 90px;
+}
+.topBar h1 span a{
+  color: #3c948b;
+  text-decoration: none;
+}
+.scope {
+  margin: 30px;
+}
+.m-input-number-container{
+  width: 130px;
+}
+input[type="range"] {
+  vertical-align: middle;
+}
+span {
+  vertical-align: middle;
+}
+.colorInput{
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  margin-top: -30px;
+}
 
-	<script src="mlib.js"></script>
-	<link rel="stylesheet" href="mlibstyle.css">
-	<script type="text/javascript" defer>
+		</style>
+	</head>
+	<body>
+		<div class="topBar">
+		  <h1>M.js Demos - <span>Created by <a href="https://mathsolve.herokuapp.com/">M{ancor}</a></span></h1>
+		</div>
+		<div class="scope">
+			<br>
+			<m-input type="range" m-change="" m-listen="value" max="100" step="0.5"></m-input>
+		  <br>
+		  <input type="range" m-listen="value">
+		  <br>
+		  <m-progressbar max="100" value="M{value}">M{value} / 100</m-progressbar>
+		  <hr>
+		  <m-polygon size="123" background='rgb(M{color.r}, M{color.g}, M{color.b})'  type="octagon"></m-polygon>
+		  <br><br>
+		  <input type="range" max="255" m-listen='color.r'>&nbsp;<span>Red:
+		    M{color.r}</span><br>
+		  <input type="range" max="255"   m-listen='color.g'>&nbsp;<span>Green:
+		    M{color.g}</span><br>
+		  <input type="range" max="255"  m-listen='color.b'>&nbsp;<span>Blue:
+		    M{color.b}</span><br>
+		  <hr>
+		  <br>
+		  <br>
+		  <m-input type="number" m-listen="title"></m-input>
+		  <br>
+		  <h1 style="background: M{title}" >M{title}</h1>
+		  <h1 style="background: M{title}" >M{title}</h1>
+		  <h1 style="background: M{title}" >M{title}</h1>
+		  <h1 style="background: M{title}" >M{title}</h1>
+		  <h1 style="background: M{title}" >M{title}</h1>
+		</div>
+		<script type="text/javascript">
+			M(document).loaded(function() {
+			  var generalScope = M('.scope, .topBar').scope(function(scope){
+			    scope.value = 50;
+			    scope.ancor = "Mathers.com";
+			    scope.color = {
+			    	r: 60,
+			      g: 148,
+			      b: 139
+			    };
+			  });
+			  M('.m-input-number-buttons button').on('mousedown', function(el, i){
+			    	generalScope.reload( M(this).parent().parent().children('input') );
+			  })
+			  M('.m-input-number').on('keydown', function() {
+			    generalScope.reload( M(this) );
+			  })
+			  M('.m-input-range-marker').on('mousemove', function() {
+			    console.log('alfo')
+			  })
+			});
 
-	</script>
-</head>
-<body>
-<h1></h1>
-<br>
-M{idade}
-
-<br>
-
-<m-polygon size='50' type="octagon" background="#3c948b">Oi</m-polygon>
-
-<br>
-<div id="scope">
-	<input type="text" m-listen="nome"> 
-	M{nome}
-	<input type="text" m-listen="nome">
-	<m-input style="background: M{color}" type="number" m-listen="nome"></m-input>
-	<m-input style="background: M{color}" type="number" value="M{idade}"></m-input>
-	<input type="text" m-listen="idade">
-
-</div>
-
-<script type="text/javascript">
-	document.addEventListener("DOMContentLoaded", function(){
-		console.log(M('input').by.attr('type', 'text').attrList())
-		M('#scope').scope(function(scope){
-			scope.nome = "Samir";
-			scope.idade = 44444;
-		});
-	})
-</script>
-</body>
+		</script>
+	</body>
 </html>

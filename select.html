@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<title>Mostrando pra Bia</title>
+		<script src="mlib.js" ></script>
+		<link rel="stylesheet" href="mlibstyle.css">
+	</head>
+	<body style="background: M{color}" >
+		<m-select m-listen="color">
+			<m-option default value="white" >Branco</m-option>
+			<m-option value="black" >Preto</m-option>
+			<m-option value="darkred" >Vinho</m-option>
+			<m-option value="cornflowerblue" >Azul viçoso</m-option>
+			<m-option value="gold" >Ouro</m-option>
+			<m-option value="gray" >Cinza</m-option>
+		</m-select>
+		<br>
+		<m-input type="range"m-listen="valor" show-way="true" max="400" style="width: 200px"></m-input>
+		<br>
+		<input style="width: M{valor}" type="text" m-listen="valor">
+		<br>	
+		<h1 style="font-size: M{valor}pt">M{valor}</h1>
+		<script>
+		M(document).loaded(function(){
+			M('html').scope(function(scope){})
+		})
+		</script>
+	</body>
+</html>

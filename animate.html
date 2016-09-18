@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<style>
+		body{
+			/* height: 2000px; */
+			margin: 20px;
+			font-size: 0;
+		}
+		input{
+			height: 100%;
+		}
+
+		</style>
+		<script src="mlib.js" ></script>
+		<link rel="stylesheet" href="mlibstyle.css">
+	</head>
+	<body>
+		<m-input type="range" m-listen="size" value="0"></m-input>
+		<m-input type="range" m-listen="borderRadius" value="0" max="50"></m-input>
+		<m-input type="range" m-listen="spacing" value="0" max="50"></m-input>
+		<m-repeat count="100" style="display: inline-block; width: M{size}px; height: M{size}px; border-radius: M{borderRadius}%; margin: M{spacing}px; background: #333"></m-repeat>
+		<script>
+		M(document).loaded(function(){
+			M('body').scope(function(scope){
+
+			})
+		})
+		</script>
+	</body>
+</html>

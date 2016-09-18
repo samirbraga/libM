@@ -1,0 +1,219 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="mlib.js"></script>
+	<link rel="stylesheet" type="text/css" href="mlibstyle.css">
+	<meta charset="utf-8" >
+	<script>
+	M(document).loaded(function(){
+		M('section').style({
+			transform: 'rotateY(0deg)'
+		})
+		setTimeout(function(){
+			/*M('section').animate({
+				top: '20'
+			}, 600, 'easeInQuad', function(){
+				M('section').animate({
+					top: '-200'
+				}, 500, 'easeOutQuad', function(){
+					M('section').animate({
+						top: '20'
+					}, 500, 'easeInQuad', function(){
+						M('section').animate({
+							top: '-100'
+						}, 400, 'easeOutQuad', function(){
+							M('section').animate({
+								top: '20'
+							}, 400, 'easeInQuad', function(){
+								M('section').animate({
+									top: '-50'
+								}, 200, 'easeOutQuad', function(){
+									M('section').animate({
+										top: '20'
+									}, 200, 'easeInQuad')
+								})
+							})
+						})
+					})
+				})
+			})*/
+			M('section').animate({
+				height: '618'
+			}, 500, 'easeInQuad')
+			M('form').setTabindex()
+		}, 100)
+		M('body').scope(function(scope){})
+		M('button').on('click', function(){
+			console.log(M('form').getJSON())
+		})
+	})
+	</script>
+	<style>
+	body{
+		padding: 0;
+
+		background: #43cea2; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	    display: -ms-inline-flexbox;
+	    display: -webkit-inline-flex;
+	    display: -webkit-inline-flexbox;
+	    display: -moz-inline-flexbox;
+	    display: -moz-inline-flex;
+	    display: inline-flexbox;
+	    display: inline-flexbox;
+	    display: inline-flex;
+	    display: flex;
+	    display: flexbox;
+
+		-webkit-justify-content: center;
+		-moz-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		-moz-align-items: center;
+		align-items: center;
+	}
+	span{
+		display: inline-block;
+	}
+	.m-input-range{
+		width: 400px;
+		display: inline-block;
+	}
+	.algo{
+		display: inline-block;
+		margin: 3px;
+	}
+	.cara{
+		width: 95%;
+		height: 50px;
+		margin: 10px 10px;
+		border-bottom: 3px solid #3c948b;
+		line-height: 50px;
+		display: block;
+	}
+	.cara:hover{
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3)
+	}
+	.cara label{
+		margin-left: 10px;
+	}
+	section{
+		width: 45%;
+		min-width: 350px;
+		margin: 0;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+		background: #fff;
+		z-index: 300;/* 
+		border: 1px solid #fff; */
+	}
+	section {
+		background: rgba(255,255,255,1);
+		overflow: hidden;
+		height: 0;
+	}
+	label{
+		cursor: pointer;
+	}
+	.form_label{
+		display: block;
+		margin: 20px 0 10px 0;
+		font-size: 12pt;
+	}
+	input.lite{
+		width: 100%;
+	}
+	.sex, .keepconnection{
+		margin: 20px 0;vertical-align: middle;
+	}
+	.sex .sex-option{
+		margin: 0 10px;
+		vertical-align: top;
+	}
+	.sex span{
+		display: inline-block;
+		font-size: 12pt;
+	}
+	form span.title{
+		display: inline-block;
+		font-size: 12pt;
+		vertical-align: middle;
+		margin-right: 10px
+	}
+	.keep-option{
+		margin-right: 10px;
+	}
+	.background{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: url('http://1.bp.blogspot.com/-1QBCYOikwMY/Ukd8ENd3WmI/AAAAAAAAAMc/VCG1E0Q8xKw/s1600/Textura.png') repeat;
+		opacity: 1;
+		left: 0;
+		top: 0;
+	}
+	.password-box:eq(0){
+		
+	}
+	.password-box{
+		width: calc(50% - 8px);
+		display: inline-block;
+	}
+	.idade-box{
+		margin: 15px 0 10px 0;
+	}
+	</style>
+</head>
+<body>
+	<div class="background"></div>
+	<section>
+		<div style="padding: 14px 20px;" >
+			<h1>Cadastro</h1>
+			<hr>
+			<form action="">
+				<label class="form_label" for="nome">Nome:</label>
+				<input class="lite" type="text" name="nome" id="nome"><br>
+				<label class="form_label" for="email">Email:</label>
+				<input class="lite" type="text" name="email" id="email"><br>
+				<div class="password-box" style='margin-right: 10px'>
+					<label class="form_label" for="password">Senha:</label>
+					<input class="lite" type="text" name="password" id="password">
+				</div>
+				<div class="password-box">
+					<label class="form_label" for="confirm_password">Confirme sua senha:</label>
+					<input class="lite" type="text" name="confirm_password"  id="confirm_password">
+				</div>
+				<div class="sex">
+					<span class="title" >Sexo:</span>
+					<m-input type="radio" id="male" value='male' name="sex"></m-input><label class="sex-option" for="male">Masculino</label>
+					<m-input type="radio" id="female" value='female' name="sex"></m-input><label class="sex-option" for="female">Feminino</label>
+				</div>
+				<span class="title">Estado:</span>
+				<m-select name="state" style="display: inline-block; width: 200px">
+				<m-option default value="acre">Acre</m-option>
+				<m-option value="ceara">Ceará</m-option>
+				<m-option value="piaui">Piauí</m-option>
+				<m-option value="goias">Goiás</m-option>
+				<m-option value="sao_paulo">São Paulo</m-option>
+				<m-option value="rio_de_janeiro">Rio de Janeiro</m-option>
+				<m-option value="Minas Gerais">Minas Gerais</m-option>''
+				<m-option value="Tocatins">Tocatins</m-option>
+				<m-option value="Mato Grosso do Sul">Mato Grosso do Sul</m-option>
+			</m-select><br>
+			<div class="idade-box">
+				<span class="title">Idade:</span>
+				<m-input class="lite" name="idade" style="width: 150px; vertical-align: middle" type="range"  m-listen="idade"></m-input>&nbsp;&nbsp;
+				<input type="text" class="lite" style="width: 50px" m-listen="idade">
+			</div>
+			<hr style="margin-top: 20px">
+
+			<div class="keepconnection" style="float: right">
+				<label class="keep-option" for="keepconnected">Mantenha-me Conectado</label><m-input name="keepconnected" type="checkbox" id="keepconnected"></m-input>
+			</div>
+		</form>
+	</div>
+	<button>CADASTRAR</button>
+</section>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="mlib.js"></script>
+	<link rel="stylesheet" type="text/css" href="mlibstyle.css">
+
+	<style>
+	body{
+		padding: 50px;
+		text-align: center;
+	}
+	span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.m-input-range{
+		width: 400px;
+		display: inline-block;
+	}
+	.algo{
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	.cara{
+		height: 50px;
+		margin: 4px 20px;
+		line-height: 50px;
+		display: block;
+		border-top: 1px solid #ddd;
+		width: calc(100% - 40px);
+		box-sizing: border-box;
+	}
+	.first{
+		border-top: 0;
+	}
+	.cara:hover label{
+	}
+	.plect{
+		display: block;
+		background: transparent;
+		margin: 0 20px 5px 20px;
+		padding: 20px 0;
+		border-bottom: 1px solid #3c948b;
+	}
+	section{
+		width: 45%;
+		min-width: 350px;
+		display: inline-block;
+		margin: 10px;
+		border: 1px solid #3c948b;
+		border-top: 2px solid #3c948b;
+		border-bottom: 3px solid #3c948b;
+		text-align: left;
+		background: #fff;/* s
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3) */
+	}
+	label{
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<m-input type="range" show-way="true" class="purple" m-listen="r" max="400" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j}</span> <br>
+	<m-input type="range" show-way="true" class="firebrick" m-listen="r" max="380" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-20}</span> <br>
+	<m-input type="range" show-way="true" class="red" m-listen="r" max="360" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-40}</span> <br>
+	<m-input type="range" show-way="true" class="goldenrod" m-listen="r" max="340" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-60}</span> <br>
+	<m-input type="range" show-way="true" class="greenyellow" m-listen="r" max="320" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-80}</span> <br>
+	<m-input type="range" show-way="true" class="lime" m-listen="r" max="300" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-100}</span> <br>
+	<m-input type="range" show-way="true" class="green" m-listen="r" max="280" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-120}</span> <br>
+	<m-input type="range" show-way="true" class="" m-listen="r" max="260" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-140}</span> <br>
+	<m-input type="range" show-way="true" class="gray" m-listen="r" max="240" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-160}</span> <br>
+	<m-input type="range" show-way="true" class="lightslategray" m-listen="r" max="220" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-180}</span> <br>
+	<m-input type="range" show-way="true" class="pink" m-listen="r" max="200" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-200}</span> <br>
+	<m-input type="range" show-way="true" class="yellow" m-listen="r" max="180" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-220}</span> <br>
+	<m-input type="range" show-way="true" class="cornflowerblue" m-listen="r" max="160" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-240}</span> <br>
+	<m-input type="range" show-way="true" class="blue" m-listen="r" max="140" ></m-input>&nbsp;&nbsp;&nbsp;<span>M{r}/M{j-260}</span> <br>
+	<br>
+<div style="width: M{r}px; height: M{r}px; background: cornflowerblue">
+	<h1 style="font-size: M{r/4}pt" >M{r}</h1>
+</div>
+<br>
+<br>
+M{residenEvil}
+<m-input type="checkbox" ></m-input>
+<m-input type="radio" m-listen="residenEvil" name="poiseh"></m-input>
+<m-input type="radio" name="poiseh"></m-input>
+<m-input type="radio" name="poiseh"></m-input>
+<m-input type="radio" name="poiseh"></m-input>
+<br>
+<br>	
+		<section>
+		<h1 class="plect">M-INPUT-RADIO Demo</h1>
+			<label class="cara first"  for="algo1">
+				<m-input class="algo radio" id="algo1" value="Carne" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo1">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo2">
+				<m-input class="algo radio" id="algo2" value="Frango" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo2">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo3">
+				<m-input class="algo radio" id="algo3" value="Peixe" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo3">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo4">
+				<m-input class="algo radio" id="algo4" value="Camarão" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo4">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo5">
+				<m-input class="algo radio" id="algo5" value="Lagosta" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo5">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo6">
+				<m-input class="algo radio" id="algo6" value="Cobra" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo6">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+		</section>
+		<section>
+		<h1 class="plect">M-INPUT-CHECKBOX Demo</h1>
+			<label class="cara first" for="just1">
+				<m-input class="algo " id="just1" value="Carne" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just1">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just2">
+				<m-input class="algo check" id="just2" value="Frango" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just2">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just3">
+				<m-input class="algo " id="just3" value="Peixe" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just3">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just4">
+				<m-input class="algo check" id="just4" value="Camarão" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just4">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just5">
+				<m-input class="algo " id="just5" value="Lagosta" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just5">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just6">
+				<m-input class="algo check" id="just6" value="Cobra" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just6">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+		</section>
+<script>
+
+M(document).loaded(function() {
+	console.log(document.querySelectorAll('.m-input-range-marker')[0].getBoundingClientRect().left)
+	var generalScope = M('body').scope(function(scope){
+		scope.r = 100;
+		scope.j = 400;
+	});
+	M('label').on('selectstart', function(e){ e.preventDefault(); return false})
+});
+</script>
+</body>
+</html>

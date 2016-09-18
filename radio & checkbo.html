@@ -1,0 +1,166 @@
+<html>
+	<head>
+		<title></title>
+	<script type="text/javascript" src="mlib.js"></script>
+	<link rel="stylesheet" type="text/css" href="mlibstyle.css">
+	<meta charset="utf-8" >
+	<style>
+	body{
+		text-align: center;
+		background-image: url('Images/demo1.jpg');
+		background-size: cover;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	span{
+		display: inline-block;
+		vertical-align: middle;
+		color: #fff;
+	}
+	.m-input-range{
+		width: 400px;
+		display: inline-block;
+	}
+	.algo{
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: middle;
+		color: #fff;
+	}
+	.cara{
+		height: 50px;
+		margin: 4px 20px;
+		line-height: 50px;
+		display: block;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		width: calc(100% - 40px);
+		box-sizing: border-box;
+		color: #fff;
+	}
+	.first{
+		border-top: 0;
+	}
+	.cara:hover label{
+	}
+	.plect{
+		display: block;
+		background: transparent;
+		margin: 0 20px 5px 20px;
+		padding: 20px 0;
+		border-bottom: 1px solid #ffffff;
+		color: #fff;
+	}
+	section{
+		width: 45%;
+		min-width: 350px;
+		display: inline-block;
+		margin: 10px 2.5%;
+		border: 1px solid #ffffff;
+		border-top: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+		border-left: 1px solid rgba(255, 255, 255, 0.3);
+		border-right: 1px solid rgba(255, 255, 255, 0.3);
+		text-align: left;
+		background: transparent;
+		color: #fff;
+		z-index: 300;
+		transition: border 0.2s ease-in;
+		height: 0;
+		overflow: hidden;
+		/* box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3) */
+	}
+	section:hover{
+		border-left-color: rgba(255, 255, 255, 0.7);
+		border-right-color: rgba(255, 255, 255, 0.7); 
+	}
+	label{
+		cursor: pointer;
+		color: #fff;
+	}
+	.background{
+		overflow: hidden;
+		position: fixed;
+		width: 120%;
+		height: 80%;
+		left: -10%;
+		z-index: -1;
+	}
+	.background div{
+		background-image: url('Images/demo1.jpg');
+		background-color: rgba(0, 51, 103, 0.7);
+		background-size: 75% auto;
+		background-position: 60px -30px;
+		background-blend-mode: multiply;
+		-webkit-filter: blur(10px);
+		filter: blur(10px); 
+		width: 120%;
+		height: 120%;
+		opacity: 1;
+		position: absolute;
+		top: -10%;
+	}
+
+
+	</style>
+	</head>
+	<body>
+
+	<div class="background">
+		<div></div>
+	</div>
+		<section>
+		<h1 class="plect">M-INPUT-RADIO Demo</h1>
+			<label class="cara first"  for="algo1">
+				<m-input class="algo radio white" id="algo1" value="Carne" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo1">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo2">
+				<m-input class="algo white radio" id="algo2" value="Frango" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo2">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo3">
+				<m-input class="algo white radio" id="algo3" value="Peixe" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo3">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo4">
+				<m-input class="algo white radio" id="algo4" value="Camarão" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo4">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo5">
+				<m-input class="algo white radio" id="algo5" value="Lagosta" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo5">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+			<label class="cara" for="algo6">
+				<m-input class="algo white radio" id="algo6" value="Cobra" type="radio" name="justdoit"></m-input><label class="font-family: sans-serif" for="algo6">Aqui você só pode escolher uma opção!</label> <br><br>
+			</label>
+		</section>
+		<br>
+		<section>
+		<h1 class="plect">M-INPUT-CHECKBOX Demo</h1>
+			<label class="cara first " for="just1">
+				<m-input class="algo white" id="just1" value="Carne" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just1">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just2">
+				<m-input class="algo white check" id="just2" value="Frango" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just2">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just3">
+				<m-input class="algo white " id="just3" value="Peixe" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just3">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just4">
+				<m-input class="algo white check" id="just4" value="Camarão" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just4">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just5">
+				<m-input class="algo white " id="just5" value="Lagosta" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just5">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+			<label class="cara" for="just6">
+				<m-input class="algo white check" id="just6" value="Cobra" type="checkbox" name="justdoit"></m-input><label class="font-family: sans-serif" for="just6">Aqui você pode escolher várias opções!</label> <br><br>
+			</label>
+		</section>
+		<script>
+		M(document).loaded(function(){
+			//M('.check').check(true);
+			//M('.radio').check(true);
+			M('section').animate({
+				height: '405'
+			}, 1000, 'easeInOutQuint')
+		})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta charset='utf-8' >
+		<script src="mlib.js" ></script>
+		<link rel="stylesheet" href="mlibstyle.css">
+		<style>
+			body{
+				margin: 40px;
+			}
+			.div{
+				background: cornflowerblue;
+				width: 150px;
+				height: 150px;
+			}
+			.second{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<m-progressbar id="barra" value="M{m}" max="100"></m-progressbar>
+		<br>
+		<m-input id="algo" type="range" style="width: 200px" show-way m-listen="m"></m-input>
+		<br>
+		<m-select class="select" >
+			<m-option value='default' default>Escolha</m-option>
+			<m-option value='opcao1'>Opção 1</m-option>
+			<m-option value='opcao2'>Opção 2</m-option>
+			<m-option value='opcao3'>Opção 3</m-option>
+			<m-option value='opcao4'>Opção 4</m-option>
+		</m-select>
+		<m-select class="select" >
+			<m-option value="default" default>Escolha</m-option>
+			<m-option class="first" value='opcao5' >Opção 5</m-option>
+			<m-option class="first" value='opcao6' >Opção 6</m-option>
+			<m-option class="first" value='opcao7' >Opção 7</m-option>
+			<m-option class="first" value='opcao8' >Opção 8</m-option>
+			<m-option class="second" value='opcao9' >Opção 9</m-option>
+			<m-option class="second" value='opcao10' >Opção 10</m-option>
+			<m-option class="second" value='opcao11' >Opção 11</m-option>
+			<m-option class="second" value='opcao12' >Opção 12</m-option>
+		</m-select>
+		<br>
+		<span id="selectVal" ></span>
+		<script>
+		M(document).loaded(function(){
+			{
+				if(M(this).val() == "opcao2"){
+					M('.first').hide();
+					M('.second').show()
+				}else if(M(this).val() == "opcao1"){
+					M('.first').show();
+					M('.second').hide()
+				}
+			}
+			M('#algo').change(function(){
+				M('#barra').val(M(this).val());
+				if(M('#barra').val() < 30){
+					M('#barra').children('div').eq(0).css({backgroundColor: "darkred"})
+				}else if(M('#barra').val() >= 30 && M('#barra').val() < 50){
+					M('#barra').children('div').eq(0).css({backgroundColor: "gold"})
+				}else if(M('#barra').val() >= 50 && M('#barra').val() < 70){
+					M('#barra').children('div').eq(0).css({backgroundColor: "#3c948b"})
+				}else{
+					M('#barra').children('div').eq(0).css({backgroundColor: "cornflowerblue"})
+				}
+			})
+		})
+		</script>
+	</body>
+</html>
